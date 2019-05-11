@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/enrl"
+            android:icon="@drawable/enrol"
+            android:title="Enroll Now" />
+        <item
+            android:id="@+id/coruse"
+            android:icon="@drawable/yoga"
+            android:title="Courses" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about"
+            android:title="About Us" />
+        <item
+            android:id="@+id/dis"
+            android:icon="@drawable/des"
+            android:title="Curable Diseases" />
+        <item
+            android:id="@+id/news"
+            android:icon="@drawable/news"
+            android:title="News" />
+        <item
+            android:id="@+id/cont"
+            android:icon="@drawable/book"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/login"
+            android:icon="@drawable/login"
+            android:title="Login" />
+    </group>
+
+
+</menu>

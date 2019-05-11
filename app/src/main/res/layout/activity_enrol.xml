@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spl"
+    android:layout_gravity="fill"
+    tools:context=".EnrolActivity">
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btnstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Name"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/White"
+        android:textColorHint="@color/WhiteDim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="172dp"
+        android:background="@drawable/btnstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:text=""
+        android:textColor="@color/White"
+        android:textColorHint="@color/WhiteDim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/btnstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Mobile"
+        android:inputType="phone"
+        android:text=""
+        android:textColor="@color/White"
+        android:textColorHint="@color/WhiteDim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/btnstyle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Address"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/White"
+        android:textColorHint="@color/WhiteDim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Enrl"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn2"
+        android:text="Enroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="140dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.119"
+        app:srcCompat="@drawable/enrol" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/crs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:text="Courses" />
+
+        <CheckBox
+            android:id="@+id/kyoga"
+            android:textColorHighlight="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            app:buttonTint="@color/White"
+            android:text="Kundalini Yoga" />
+
+        <CheckBox
+            android:id="@+id/tyoga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            app:buttonTint="@color/White"
+            android:text="Thambula Kriya" />
+
+        <CheckBox
+            android:id="@+id/myoga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mashinottam"
+            android:textColor="@color/White"
+            app:buttonTint="@color/White"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="522dp" />
+
+    </LinearLayout>
+
+    c<android.support.design.widget.CoordinatorLayout
+        android:id="@+id/myCoordinatorLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Here are the existing layout elements, now wrapped in
+             a CoordinatorLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- …Toolbar, other layouts, other elements… -->
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.constraint.ConstraintLayout>

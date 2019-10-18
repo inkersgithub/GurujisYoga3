@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,FullscreenActivity.class);
+                Intent intent = new Intent(MainActivity.this,Facetoface.class);
                 startActivity(intent);
 
 
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.news) {
 
             webview.startAnimation(slideLeftAnimation);
-            webview.loadUrl(url+langdata+"/news.html");
+            webview.loadUrl("https://app.gurujisyoga.com/news");
 
         }  else if (id == R.id.cont) {
 

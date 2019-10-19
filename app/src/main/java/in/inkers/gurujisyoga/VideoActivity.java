@@ -39,7 +39,7 @@ public class VideoActivity extends AppCompatActivity {
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
 
-        videoView.setVideoPath("http://gurujisyoga.com/wp-content/uploads/2019/02/NadiKriya_SD-1.mp4");
+        videoView.setVideoPath("http://gurujisyoga.com/wp-content/uploads/2019/02/Promo.mp4");
 
         videoView.start();
 

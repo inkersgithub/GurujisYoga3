@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -56,12 +57,12 @@ public class MainActivity extends AppCompatActivity
         webview.setLongClickable(false);
         set.setJavaScriptEnabled(true);
         set.setBuiltInZoomControls(false);
+        webview.setWebChromeClient(new ACWebchromeClient2());
         webview.setVerticalScrollBarEnabled(false);
         webview.getSettings().setAppCachePath("/data/data/"+ getPackageName() +"/cache");
         webview.getSettings().setAppCacheEnabled(true);
         webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
         webview.getSettings().setDomStorageEnabled(true);
-        webview.getSettings().setAppCacheMaxSize(1024*1024*8);
         webview.getSettings().setAllowUniversalAccessFromFileURLs(true);
         webview.setBackgroundColor(0x00000000);
         /*webview.loadUrl("file:///android_asset/"+langdata+"/index.html");*/
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Facetoface.class);
+                Intent intent = new Intent(MainActivity.this,ytubeActivity.class).putExtra("yid","CtQYF3wlgL8");
                 startActivity(intent);
 
 
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity
         if(langdata.equalsIgnoreCase("mal")) {
             txtvw.setText(content);
             tagline.setText("ധ്യാനം ബുദ്ധിയുള്ള ജ്ഞാനം");
-            m0.setTitle("പങ്കെടുക്കുക");
+            m0.setTitle("അന്വേഷണം");
             m1.setTitle("കോഴ്സുകൾ");
             m2.setTitle("ഞങ്ങളെക്കുറിച്ച്");
             m3.setTitle("മാറ്റിയെടുക്കാവുന്ന രോഗങ്ങൾ");
@@ -200,7 +201,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.news) {
 
             webview.startAnimation(slideLeftAnimation);
-            webview.loadUrl("https://app.gurujisyoga.com/news");
+            webview.loadUrl(url+langdata+"/news.html");
 
         }  else if (id == R.id.cont) {
 
@@ -209,8 +210,8 @@ public class MainActivity extends AppCompatActivity
 
         }  else if (id == R.id.enrl) {
 
-            Intent intent = new Intent(MainActivity.this,EnrolActivity.class);
-            startActivity(intent);
+            webview.startAnimation(slideLeftAnimation);
+            webview.loadUrl("https://app.gurujisyoga.com/enquiry-"+langdata);
 
         }else if (id == R.id.login) {
 
@@ -224,13 +225,30 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    public class ACWebchromeClient2 extends WebChromeClient {
+
+
+        @Override
+        public void onProgressChanged(WebView view, int newProgress) {
+            super.onProgressChanged(view, newProgress);
+
+
+            if (newProgress >= 100) {
+                findViewById(R.id.avi2).setVisibility(View.GONE);
+
+            } else {
+                findViewById(R.id.avi2).setVisibility(View.VISIBLE);
+
+            }
+        }
+    }
     class WebClient extends WebViewClient {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
 
-            if (url.contains("enroll.html")) {
+           if (url.contains("PROMO.html")) {
 
-                Intent intent = new Intent(MainActivity.this, EnrolActivity.class);
+                Intent intent = new Intent(MainActivity.this, VideoActivity.class);
                 startActivity(intent);
 
 
@@ -245,13 +263,14 @@ public class MainActivity extends AppCompatActivity
                 Matcher matcher = compiledPattern.matcher(url); //url is youtube url for which you want to extract the id.
                 if (matcher.find()) {
 
-//                Intent intent = new Intent(MainActivity.this,ytubeActivity.class);
-//                intent.putExtra("yid",matcher.group());
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,ytubeActivity.class);
+                intent.putExtra("yid",matcher.group());
+                startActivity(intent);
                 }
 
 
             } else {
+
                 view.loadUrl(url);
             }
 
